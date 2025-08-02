@@ -31,17 +31,14 @@ The following section provides usage examples for the module, which were used to
 
 >**Note**: To reference the module, please use the following syntax `br/public:avm/res/network/virtual-network:<version>`.
 
-- [Using only defaults](#example-1-using-only-defaults)
-- [Using IPAM Pool Prefix Allocations](#example-2-using-ipam-pool-prefix-allocations)
-- [Using an IPv6 address space](#example-3-using-an-ipv6-address-space)
-- [Using large parameter set](#example-4-using-large-parameter-set)
-- [Deploying a bi-directional peering](#example-5-deploying-a-bi-directional-peering)
-- [WAF-aligned](#example-6-waf-aligned)
+- [Defaults](#example-1-defaults)
+- [Ipam](#example-2-ipam)
+- [Ipv6](#example-3-ipv6)
+- [Max](#example-4-max)
+- [Vnetpeering](#example-5-vnetpeering)
+- [Waf-Aligned](#example-6-waf-aligned)
 
-### Example 1: _Using only defaults_
-
-This instance deploys the module with the minimum set of required parameters.
-
+### Example 1: _Defaults_
 
 <details>
 
@@ -113,10 +110,7 @@ param location = '<location>'
 </details>
 <p>
 
-### Example 2: _Using IPAM Pool Prefix Allocations_
-
-This instance deploys the module with IP Addresses allocated from the IPAM Pool
-
+### Example 2: _Ipam_
 
 <details>
 
@@ -300,10 +294,7 @@ param subnets = [
 </details>
 <p>
 
-### Example 3: _Using an IPv6 address space_
-
-This instance deploys the module using an IPv6 address space.
-
+### Example 3: _Ipv6_
 
 <details>
 
@@ -407,10 +398,7 @@ param subnets = [
 </details>
 <p>
 
-### Example 4: _Using large parameter set_
-
-This instance deploys the module with most of its features enabled.
-
+### Example 4: _Max_
 
 <details>
 
@@ -823,10 +811,7 @@ param tags = {
 </details>
 <p>
 
-### Example 5: _Deploying a bi-directional peering_
-
-This instance deploys the module with both an inbound and outbound peering.
-
+### Example 5: _Vnetpeering_
 
 <details>
 
@@ -1003,10 +988,7 @@ param tags = {
 </details>
 <p>
 
-### Example 6: _WAF-aligned_
-
-This instance deploys the module in alignment with the best-practices of the Well-Architected Framework.
-
+### Example 6: _Waf-Aligned_
 
 <details>
 

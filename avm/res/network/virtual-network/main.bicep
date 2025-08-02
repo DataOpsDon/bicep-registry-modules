@@ -117,11 +117,12 @@ resource avmTelemetry 'Microsoft.Resources/deployments@2024-03-01' = if (enableT
   }
 }
 
-resource virtualNetwork 'Microsoft.Network/virtualNetworks@2024-05-01' = {
+resource virtualNetwork 'Microsoft.Network/virtualNetworks@2024-07-01' = {
   name: name
   location: location
   tags: tags
   properties: {
+
     addressSpace: contains(addressPrefixes[0], '/Microsoft.Network/networkManagers/')
       ? {
           ipamPoolPrefixAllocations: [
@@ -416,7 +417,7 @@ type subnetType = {
   serviceEndpoints: string[]?
 
   @description('Optional. Set this property to false to disable default outbound connectivity for all VMs in the subnet. This property can only be set at the time of subnet creation and cannot be updated for an existing subnet.')
-  defaultOutboundAccess: bool?
+  defaultOutboundAccess: bool? = false
 
   @description('Optional. Set this property to Tenant to allow sharing subnet with other subscriptions in your AAD tenant. This property can only be set if defaultOutboundAccess is set to false, both properties can only be set if subnet is empty.')
   sharingScope: ('DelegatedServices' | 'Tenant')?
